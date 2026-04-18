@@ -23,18 +23,36 @@ position:fixed;
 width:100%;
 padding:20px 40px;
 display:flex;
+align-items:center;
 justify-content:space-between;
 transition:0.3s;
 z-index:1000;
 }
 
-header h2{
-font-size:24px;
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#fff;
+}
+
+.logo img{
+width:42px;
+height:auto;
+border-radius:10px;
+object-fit:contain;
+}
+
+.logo span{
+font-size:20px;
 font-weight:700;
+letter-spacing:1px;
 }
 
 header.scrolled{
-background:#000;
+background:rgba(0,0,0,0.95);
+backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -43,10 +61,15 @@ margin:0 10px;
 text-decoration:none;
 }
 
+nav a:hover,
+.logo:hover span{
+color:#D69E6B
+}
+
 /* HERO */
 .hero{
 height:100vh;
-background:url('images/bg.jpg') center/cover fixed;
+background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bg.jpg') center/cover fixed;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -57,28 +80,35 @@ position:relative;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
 position:relative;
 text-align:center;
+max-width:720px;
+padding:0 20px;
 }
 
-.hero-content img{
-max-width:200px;
-height:auto;
-margin:20px 0;
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+letter-spacing:1px;
 }
 
-.hero h1{font-size:48px}
+.hero-content p{
+font-size:18px;
+line-height:1.8;
+max-width:560px;
+margin:0 auto;
+}
 
 /* BOTÃO */
 .btn{
 display:inline-block;
 margin-top:20px;
 padding:14px 28px;
-background:#25D366;
+background:#D69E6B;
 border-radius:30px;
 color:#fff;
 text-decoration:none;
@@ -115,12 +145,12 @@ transform:translateY(-10px);
 .card span{
 display:block;
 margin:10px 0;
-color:#25D366;
+color:#D69E6B;
 font-weight:bold;
 }
 
 .destaque{
-border:2px solid #25D366;
+border:2px solid #D69E6B
 }
 
 /* PROMO */
@@ -153,7 +183,7 @@ padding:100px;
 }
 
 .whatsapp{
-background:#25D366;
+background:#D69E6B;
 padding:15px 30px;
 border-radius:30px;
 color:#fff;
@@ -181,7 +211,7 @@ margin-top:40px;
 
 .stat h3{
 font-size:36px;
-color:#25D366;
+color:#D69E6B;
 }
 
 .stat p{
@@ -214,7 +244,7 @@ font-style:italic;
 }
 
 cite{
-color:#25D366;
+color:#D69E6B;
 }
 
 /* FOOTER */
@@ -239,7 +269,7 @@ text-decoration:none;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
+background:#D69E6B;
 color:#fff;
 border:none;
 border-radius:50%;
