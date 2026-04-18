@@ -4,9 +4,10 @@ body{
 font-family:'Poppins',sans-serif;
 background:#0d0d0d;
 color:#fff;
+overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
-/* Animations */
+/* Animations - Mantendo seu Fade-in */
 section{
 opacity:0;
 transform:translateY(20px);
@@ -66,14 +67,36 @@ nav a:hover,
 color:#D69E6B
 }
 
-/* HERO */
+/* HERO - Ajustado para Carrossel com Zoom */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bg.jpg') center/cover fixed;
 display:flex;
 align-items:center;
 justify-content:center;
 position:relative;
+overflow: hidden; /* Importante para o zoom não vazar */
+}
+
+.carousel{
+position:absolute;
+width:100%;
+height:100%;
+z-index: 1; /* Atrás do overlay e conteúdo */
+}
+
+.carousel img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transform: scale(1); /* Base para o zoom */
+transition: opacity 1.5s ease, transform 5s linear; /* Zoom suave e longo */
+}
+
+.carousel img.active{
+opacity:1;
+transform: scale(1.15); /* Efeito de zoom na ativa */
 }
 
 .overlay{
@@ -81,6 +104,7 @@ position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.55);
+z-index: 2; /* Sobre a foto, sob o texto */
 }
 
 .hero-content{
@@ -88,6 +112,7 @@ position:relative;
 text-align:center;
 max-width:720px;
 padding:0 20px;
+z-index: 3; /* Texto no topo para ser clicável */
 }
 
 .hero h1{
@@ -112,6 +137,12 @@ background:#D69E6B;
 border-radius:30px;
 color:#fff;
 text-decoration:none;
+transition: 0.3s;
+}
+
+.btn:hover {
+transform: scale(1.05);
+background: #b88659;
 }
 
 /* PRODUTOS */
@@ -286,7 +317,7 @@ z-index:1000;
 background:#128C7E;
 }
 
-/* Media Queries */
+/* Media Queries - Restaurando suas regras de mobile */
 @media (max-width: 768px) {
     header{
         padding:15px 20px;
@@ -307,11 +338,6 @@ background:#128C7E;
 
     .hero-content img{
         max-width:150px;
-    }
-
-    .categorias{
-        grid-template-columns:1fr;
-        padding:40px 20px;
     }
 
     .grid{
