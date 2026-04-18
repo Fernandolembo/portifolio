@@ -1,0 +1,299 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
+color:#fff;
+}
+
+/* Animations */
+section{
+opacity:0;
+transform:translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.fade-in{
+opacity:1;
+transform:translateY(0);
+}
+
+header{
+position:fixed;
+width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+transition:0.3s;
+z-index:1000;
+}
+
+header h2{
+font-size:24px;
+font-weight:700;
+}
+
+header.scrolled{
+background:#000;
+}
+
+nav a{
+color:#fff;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('images/bg.jpg') center/cover fixed;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+}
+
+.hero-content img{
+max-width:200px;
+height:auto;
+margin:20px 0;
+}
+
+.hero h1{font-size:48px}
+
+/* BOTÃO */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 28px;
+background:#25D366;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+}
+
+/* PRODUTOS */
+.produtos{
+padding:80px 40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card span{
+display:block;
+margin:10px 0;
+color:#25D366;
+font-weight:bold;
+}
+
+.destaque{
+border:2px solid #25D366;
+}
+
+/* PROMO */
+.promo{
+height:400px;
+background:url('images/bg2.jpg') center/cover;
+display:flex;
+align-items:center;
+padding-left:50px;
+}
+
+.promo-text{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:15px;
+}
+
+/* BENEFÍCIOS */
+.beneficios{
+display:flex;
+justify-content:space-around;
+padding:50px;
+background:#111;
+}
+
+/* CONTATO */
+.contato{
+text-align:center;
+padding:100px;
+}
+
+.whatsapp{
+background:#25D366;
+padding:15px 30px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+}
+
+/* SOBRE NÓS */
+.sobre{
+padding:80px 40px;
+text-align:center;
+background:#111;
+}
+
+.sobre p{
+max-width:600px;
+margin:20px auto;
+line-height:1.6;
+}
+
+.stats{
+display:flex;
+justify-content:space-around;
+margin-top:40px;
+}
+
+.stat h3{
+font-size:36px;
+color:#25D366;
+}
+
+.stat p{
+margin-top:10px;
+}
+
+/* DEPOIMENTOS */
+.depoimentos{
+padding:80px 40px;
+background:#0d0d0d;
+}
+
+.depoimentos h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.depoimento{
+background:#111;
+padding:20px;
+border-radius:15px;
+margin:20px auto;
+max-width:400px;
+text-align:center;
+}
+
+.depoimento p{
+margin-bottom:10px;
+font-style:italic;
+}
+
+cite{
+color:#25D366;
+}
+
+/* FOOTER */
+footer{
+background:#000;
+padding:40px;
+text-align:center;
+}
+
+footer p{
+margin:10px 0;
+}
+
+.social a{
+color:#fff;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* Back to Top */
+.back-to-top{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+border:none;
+border-radius:50%;
+width:50px;
+height:50px;
+font-size:20px;
+cursor:pointer;
+display:none;
+transition:0.3s;
+z-index:1000;
+}
+
+.back-to-top:hover{
+background:#128C7E;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header{
+        padding:15px 20px;
+    }
+
+    header h2{
+        font-size:20px;
+    }
+
+    nav a{
+        margin:0 5px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero-content img{
+        max-width:150px;
+    }
+
+    .categorias{
+        grid-template-columns:1fr;
+        padding:40px 20px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .beneficios{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+}
