@@ -327,6 +327,62 @@ cite{
 color:#D69E6B;
 }
 
+/* INSTAGRAM - Ajustado para o Widget Behold */
+.instagram-section {
+    padding: 80px 20px;
+    background-color: #0d0d0d; /* Fundo preto oficial */
+    text-align: center;
+    opacity: 1 !important; /* Garante que a seção apareça */
+    transform: none !important; 
+}
+
+/* Estilo do Botão com Logo */
+.instagram-section .btn {
+    background: transparent !important; 
+    border: 1px solid #D69E6B !important; /* Bordinha dourada fina */
+    color: #fff;                        /* Texto branco */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.instagram-section .btn:hover {
+    background: rgba(214, 158, 107, 0.1) !important; /* Brilho leve ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.instagram-section .btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.insta-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 300px; /* Evita que a página "pule" enquanto carrega */
+}
+
+/* Forçar o widget a ocupar 100% da largura disponível */
+behold-widget {
+    width: 100%;
+    display: block;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 50px 15px;
+    }
+    
+    .instagram-section h2 {
+        font-size: 24px;
+    }
+}
 /* FOOTER */
 footer{
 background:#000;
