@@ -99,12 +99,13 @@ opacity:1;
 transform: scale(1.15); /* Efeito de zoom na ativa */
 }
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
-z-index: 2; /* Sobre a foto, sob o texto */
+.overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+/* Gradiente que começa transparente e termina na cor exata do seu fundo */
+background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(13,13,13,1) 100%);
+z-index: 2;
 }
 
 .hero-content{
@@ -145,9 +146,23 @@ transform: scale(1.05);
 background: #b88659;
 }
 
-/* PRODUTOS */
-.produtos{
-padding:80px 40px;
+/* PRODUTOS - Título centralizado e design refinado */
+.produtos {
+padding: 80px 40px;
+text-align: center; /* Isso centraliza o título e o que estiver dentro da section */
+}
+
+.produtos h2 {
+margin-bottom: 50px; /* Dá mais respiro entre o título e os cards */
+font-size: 2rem;
+letter-spacing: 1px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 30px;
+text-align: center; /* Mantém o conteúdo dos cards centralizado */
 }
 
 .grid{
