@@ -437,39 +437,57 @@ z-index:1000;
 background:#D69E6B;
 }
 
-/* Media Queries - Restaurando suas regras de mobile */
+/* RESPONSIVIDADE CORRIGIDA */
 @media (max-width: 768px) {
-    header{
-        padding:15px 20px;
+    header { 
+        padding: 15px 20px; 
+        flex-direction: column; /* Coloca a logo em cima e o menu embaixo */
+        gap: 10px;
+        height: auto;
+        background: rgba(0,0,0,0.95); /* Garante leitura no mobile */
     }
 
-    header h2{
-        font-size:20px;
+    /* REMOVIDO O DISPLAY NONE - Agora ele aparece organizado */
+    nav { 
+        display: flex; 
+        justify-content: center; 
+        gap: 15px; 
+        width: 100%;
     }
 
-    nav a{
-        margin:0 5px;
-        font-size:14px;
+    nav a {
+        margin: 0;
+        font-size: 13px; /* Diminui um pouco a letra para caber tudo em uma linha */
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .hero h1{
-        font-size:36px;
+    .logo span {
+        font-size: 18px;
     }
 
-    .hero-content img{
-        max-width:150px;
+    .hero h1 { 
+        font-size: 2.5rem; 
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .stats { 
+        gap: 30px; 
+        flex-direction: column; /* Stats um embaixo do outro no celular */
     }
 
-    .beneficios{
-        flex-direction:column;
-        text-align:center;
+    .promo { 
+        padding: 20px; 
+        justify-content: center; 
+        text-align: center; 
+        height: auto;
+        min-height: 400px;
     }
 
-    .stats{
-        flex-direction:column;
+    .card img { 
+        height: 250px; 
+    }
+
+    .beneficios {
+        padding: 40px 20px;
     }
 }
