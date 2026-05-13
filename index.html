@@ -21,6 +21,9 @@
     <a href="#instagram">Instagram</a>
     <a href="#contato">Pedido</a>
   </nav>
+  <button id="cart-button" class="cart-button">
+    🛒 <span id="cart-count" class="cart-count">0</span>
+  </button>
 </header>
 
 <!-- HERO COM CARROSSEL -->
@@ -44,25 +47,25 @@
   <h2>Mais vendidos</h2>
 
   <div class="grid">
-    <div class="card destaque">
+    <div class="card destaque" data-product="Tradicional" data-price="5.00">
       <img src="images/cookie1.png" alt="Cookie Tradicional">
       <h3>Tradicional</h3>
       <span>R$ 5,00</span>
-      <a href="https://wa.me/5511945566009?text=Olá,%20tudo%20bem%20gostaria%20de%20um%20cookie!" class="btn">Pedir</a>
+      <button class="btn add-to-cart">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="card destaque">
+    <div class="card destaque" data-product="Nutella" data-price="7.00">
       <img src="images/cookie3.png" alt="Cookie Nutella">
       <h3>Nutella</h3>
       <span>R$ 7,00</span>
-      <a href="https://wa.me/5511945566009?text=Olá,%20tudo%20bem%20gostaria%20de%20um%20cookie!" class="btn">Pedir</a>
+      <button class="btn add-to-cart">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="card destaque">
+    <div class="card destaque" data-product="M&M's" data-price="6.00">
       <img src="images/cookie2.png" alt="Cookie M&M's">
       <h3>M&M's</h3>
       <span>R$ 6,00</span>
-      <a href="https://wa.me/5511945566009?text=Olá,%20tudo%20bem%20gostaria%20de%20um%20cookie!" class="btn">Pedir</a>
+      <button class="btn add-to-cart">Adicionar ao Carrinho</button>
     </div>
   </div>
 </section>
@@ -70,9 +73,10 @@
 <!-- PROMO -->
 <section class="promo">
   <div class="promo-text">
-    <h2>Ganhe 5% OFF 🍪</h2>
-    <p>Somente hoje para pedidos no WhatsApp</p>
-    <a href="https://wa.me/5511945566009?text=Pedido%20com%2010%25%20OFF" class="btn">Pedir agora</a>
+    <h2>Ganhe 5% OFF 🍪</h2><br>
+    <p>Somente em pedidos feito no site</p><br>
+    <p2>** Pedido mínimo de 5 cookies</p2>
+    <button onclick="document.getElementById('cart-button').click()" class="btn">Ver Carrinho</button>
   </div>
 </section>
 
@@ -152,9 +156,9 @@
 <!-- CONTATO -->
 <section id="contato" class="contato">
   <h2>Faça seu pedido</h2>
-  <a href="https://wa.me/5511945566009?text=Olá,%20tudo%20bem%20gostaria%20de%20um%20cookie!"  target="_blank">
-    <img src="https://img.icons8.com/color/96/whatsapp.png" alt="Falar no WhatsApp" style="width: 96px; height: 96px;">
-  </a>
+  <button id="open-cart-footer" class="btn" style="font-size: 16px; padding: 16px 32px;">
+    🛒 Abrir Carrinho
+  </button>
 </section>
 
 <!-- FOOTER -->
@@ -172,6 +176,26 @@
 
 <!-- Botão Voltar ao Topo -->
 <button id="back-to-top" class="back-to-top">↑</button>
+
+<!-- MODAL DO CARRINHO -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <div class="cart-header">
+      <h2>Seu Carrinho 🛒</h2>
+      <button id="close-cart" class="close-btn">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <!-- Itens adicionados aqui dinamicamente -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <strong>Total: </strong>
+        <span id="total-price">R$ 0,00</span>
+      </div>
+      <button id="checkout-btn" class="btn btn-checkout">Finalizar Pedido no WhatsApp</button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 
