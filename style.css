@@ -249,6 +249,8 @@ padding-left:50px;
 background:rgba(0,0,0,0.6);
 padding:30px;
 border-radius:15px;
+text-align: center;
+align-items: center;
 }
 
 .promo-text p2{
