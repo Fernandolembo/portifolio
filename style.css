@@ -238,11 +238,12 @@ border:2px solid #D69E6B
 
 /* PROMO */
 .promo{
+text-align: center;
 height:400px;
 background:url('images/bg2.jpg') center/cover;
 display:flex;
 align-items:center;
-padding-left:50px;
+justify-content:center;
 }
 
 .promo-text{
