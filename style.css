@@ -425,10 +425,16 @@ color:#D69E6B;
 .insta-container {
     max-width: 1100px;
     margin: 0 auto;
-    min-height: 300px; /* Evita que a página "pule" enquanto carrega */
+    min-height: 300px; 
 }
 
-/* Forçar o widget a ocupar 100% da largura disponível */
+.localizacao { 
+    margin:20px auto;
+    max-width:1000px;
+    text-align:center;
+    font-style:arial;
+}
+
 behold-widget {
     width: 100%;
     display: block;
